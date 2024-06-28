@@ -48,7 +48,7 @@ let projects = projectsList.map((project) => {
   btn.style.borderRadius = "1rem";
   btn.style.border = "1px solid #11111";
   btn.style.padding = "1rem";
-  btn.style.cursor = 'pointer'
+  btn.style.cursor = "pointer";
   btn.style.fontSize = "1.5rem";
   return list;
 });
@@ -56,7 +56,7 @@ let projects = projectsList.map((project) => {
 projectsListContainer.append(...projects);
 
 //Tasks
-const addBtn = document.querySelector('.js-add-btn')
+const addBtn = document.querySelector(".js-add-btn");
 const todoContainer = document.querySelector(".js-todo-list-container");
 styleContainer(todoContainer, "#d9f99d");
 
@@ -74,5 +74,12 @@ addBtn.style.backgroundColor = "transparent";
 addBtn.style.borderRadius = "1rem";
 addBtn.style.border = "1px solid #11111";
 addBtn.style.padding = "1rem";
-addBtn.style.cursor = 'pointer'
+addBtn.style.cursor = "pointer";
 addBtn.style.fontSize = "1.5rem";
+
+addBtn.addEventListener("click", () => {
+  const inputContainer = document.querySelector(".js-input-container");
+  inputContainer.classList.toggle("show");
+});
+
+//Create new task
